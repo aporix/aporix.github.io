@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+  <title id="title">Markdown writing workflow</title>
+  <desc id="desc">A simple diagram showing Markdown, local image assets, Mermaid diagrams, and GitHub Pages publishing.</desc>
+  <rect width="960" height="480" fill="#f8faf8"/>
+  <rect x="48" y="48" width="864" height="384" rx="18" fill="#ffffff" stroke="#d8e2df" stroke-width="2"/>
+  <text x="96" y="112" fill="#18211f" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="700">Markdown-first publishing</text>
+  <text x="96" y="148" fill="#62706d" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18">Write the article, keep images beside it, draw diagrams as text.</text>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <rect x="96" y="210" width="164" height="96" rx="10" fill="#d8f7f1" stroke="#0f766e" stroke-width="2"/>
+    <text x="128" y="252" fill="#073f3a" font-size="20" font-weight="700">index.md</text>
+    <text x="128" y="278" fill="#0f766e" font-size="15">frontmatter + text</text>
+    <path d="M276 258H386" stroke="#62706d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M386 258l-14-10v20z" fill="#62706d"/>
+    <rect x="408" y="210" width="164" height="96" rx="10" fill="#eef5f3" stroke="#94a9a3" stroke-width="2"/>
+    <text x="444" y="252" fill="#18211f" font-size="20" font-weight="700">images</text>
+    <text x="444" y="278" fill="#62706d" font-size="15">./asset.svg</text>
+    <path d="M588 258H698" stroke="#62706d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M698 258l-14-10v20z" fill="#62706d"/>
+    <rect x="720" y="210" width="164" height="96" rx="10" fill="#123c39" stroke="#5eead4" stroke-width="2"/>
+    <text x="752" y="252" fill="#d5fff8" font-size="20" font-weight="700">Mermaid</text>
+    <text x="752" y="278" fill="#9ff8ec" font-size="15">text diagrams</text>
+  </g>
+  <rect x="96" y="348" width="788" height="42" rx="8" fill="#18211f"/>
+  <text x="126" y="375" fill="#edf7f4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">src/content/posts/example-post/index.md + local assets -> GitHub Pages</text>
+</svg>
