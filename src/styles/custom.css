@@ -64,3 +64,23 @@
 .comments-block p {
   color: var(--sl-color-gray-3);
 }
+
+.mermaid-diagram {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.45rem;
+  background: var(--sl-color-black);
+}
+
+.mermaid-diagram svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.mermaid-error {
+  border-color: #b42318;
+}

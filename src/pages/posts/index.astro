@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { formatDate, getPostHref, getTagSlug, sortPosts } from '../../lib/posts';
+
+const posts = sortPosts(await getCollection('posts', ({ data }) => !data.draft));
+---
+
+<BlogLayout title="Aporix Notes" description="Chronological engineering notes from Aporix.">
+  <section>
+    <p class="page-kicker">Notes</p>
+    <h1>Recent writing</h1>
+    <p class="lede">Short notes and longer essays, ordered by publication date.</p>
+  </section>
+
+  <section class="post-list" aria-label="Posts">
+    {posts.map((post) => (
+      <article class="post-item">
+        <p class="post-meta">{formatDate(post.data.date)}</p>
+        <h2><a href={getPostHref(post)}>{post.data.title}</a></h2>
+        <p>{post.data.description}</p>
+        {post.data.tags.length > 0 && (
+          <div class="tag-list" aria-label="Tags">
+            {post.data.tags.map((tag) => (
+              <a class="tag" href={`/tags/${getTagSlug(tag)}/`}>{tag}</a>
+            ))}
+          </div>
+        )}
+      </article>
+    ))}
+  </section>
+</BlogLayout>

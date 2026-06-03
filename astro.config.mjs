@@ -28,6 +28,9 @@ export default defineConfig({
           items: [
             { label: 'Home', slug: 'index' },
             { label: 'Writing System', slug: 'writing-system' },
+            { label: 'Recent Posts', link: '/posts/' },
+            { label: 'Archive', link: '/archive/' },
+            { label: 'Tags', link: '/tags/' },
           ],
         },
         {

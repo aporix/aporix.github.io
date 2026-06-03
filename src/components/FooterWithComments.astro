@@ -1,5 +1,7 @@
 ---
 import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+import Comments from './Comments.astro';
+import MermaidRuntime from './MermaidRuntime.astro';
 
 const route = Astro.locals.starlightRoute;
 const pageId = route?.id ?? '';
@@ -10,20 +12,8 @@ const showComments = pageId !== '' && pageId !== 'writing-system';
   <slot />
 </DefaultFooter>
 
+<MermaidRuntime />
+
 {
-  showComments && (
-    <section class="comments-block" aria-labelledby="comments-title">
-      <h2 id="comments-title">Comments</h2>
-      <p>Comments are powered by GitHub Issues. Sign in with GitHub to leave a note.</p>
-      <script
-        src="https://utteranc.es/client.js"
-        repo="aporix/aporix.github.io"
-        issue-term="pathname"
-        label="comment"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async
-      />
-    </section>
-  )
+  showComments && <Comments />
 }

@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getTagIndex, getTagSlug, sortPosts } from '../../lib/posts';
+
+const posts = sortPosts(await getCollection('posts', ({ data }) => !data.draft));
+const tagIndex = getTagIndex(posts);
+const tags = [...tagIndex.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+---
+
+<BlogLayout title="Tags" description="Browse Aporix posts by tag.">
+  <section>
+    <p class="page-kicker">Tags</p>
+    <h1>Topics</h1>
+    <p class="lede">A lightweight index for recurring themes.</p>
+  </section>
+
+  <section class="tag-list" aria-label="Tags">
+    {tags.map(([tag, taggedPosts]) => (
+      <a class="tag" href={`/tags/${getTagSlug(tag)}/`}>{tag} · {taggedPosts.length}</a>
+    ))}
+  </section>
+</BlogLayout>

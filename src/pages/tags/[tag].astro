@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { formatDate, getPostHref, getTagIndex, getTagSlug, sortPosts } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = sortPosts(await getCollection('posts', ({ data }) => !data.draft));
+  const tagIndex = getTagIndex(posts);
+
+  return [...tagIndex.entries()].map(([tag, taggedPosts]) => ({
+    params: { tag: getTagSlug(tag) },
+    props: { tag, posts: taggedPosts },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BlogLayout title={`Tag: ${tag}`} description={`Posts tagged ${tag}.`}>
+  <section>
+    <p class="page-kicker">Tag</p>
+    <h1>{tag}</h1>
+    <p class="lede">{posts.length} post{posts.length === 1 ? '' : 's'} in this topic.</p>
+  </section>
+
+  <section class="post-list" aria-label="Posts">
+    {posts.map((post) => (
+      <article class="post-item">
+        <p class="post-meta">{formatDate(post.data.date)}</p>
+        <h2><a href={getPostHref(post)}>{post.data.title}</a></h2>
+        <p>{post.data.description}</p>
+      </article>
+    ))}
+  </section>
+</BlogLayout>

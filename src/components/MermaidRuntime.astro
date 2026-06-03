@@ -1,0 +1,44 @@
+<script>
+  const renderMermaidBlocks = async () => {
+    const blocks = document.querySelectorAll('pre[data-language="mermaid"], pre code.language-mermaid');
+    if (blocks.length === 0) return;
+
+    const { default: mermaid } = await import('mermaid');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'strict',
+      theme: prefersDark ? 'dark' : 'default',
+    });
+
+    for (const block of blocks) {
+      const pre = block.tagName === 'PRE' ? block : block.parentElement;
+      if (!pre || pre.dataset.mermaidRendered) continue;
+
+      const container = pre.closest('.expressive-code') ?? pre;
+      const copySource = container.querySelector('button[data-code]')?.getAttribute('data-code');
+      const lineNodes = Array.from(pre.querySelectorAll('.ec-line .code'));
+      const source =
+        copySource?.replaceAll('\u007f', '\n') ??
+        (lineNodes.length > 0 ? lineNodes.map((line) => line.textContent ?? '').join('\n') : pre.textContent ?? '');
+      const diagram = document.createElement('div');
+      diagram.className = 'mermaid-diagram';
+
+      try {
+        const id = `mermaid-${Math.random().toString(36).slice(2)}`;
+        const { svg } = await mermaid.render(id, source);
+        diagram.innerHTML = svg;
+        container.replaceWith(diagram);
+      } catch {
+        pre.dataset.mermaidRendered = 'error';
+        pre.classList.add('mermaid-error');
+      }
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaidBlocks, { once: true });
+  } else {
+    renderMermaidBlocks();
+  }
+</script>
