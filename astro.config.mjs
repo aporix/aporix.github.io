@@ -22,6 +22,9 @@ export default defineConfig({
         baseUrl: 'https://github.com/aporix/aporix.github.io/edit/master/',
       },
       customCss: ['./src/styles/custom.css'],
+      components: {
+        Footer: './src/components/FooterWithComments.astro',
+      },
       sidebar: [
         {
           label: 'Start',

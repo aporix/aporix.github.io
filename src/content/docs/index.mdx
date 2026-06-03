@@ -1,41 +1,53 @@
 ---
 title: Aporix
 description: Systems, network protocols, and agent infrastructure.
-template: splash
-hero:
-  tagline: Systems, network protocols, agent infrastructure, and long-form engineering notes.
-  actions:
-    - text: Start Reading
-      link: /writing-system/
-      icon: right-arrow
-    - text: GitHub
-      link: https://github.com/aporix
-      icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Focus
+Aporix is a public engineering notebook for systems programming, network protocols, and agent infrastructure.
+
+This site is intentionally structured as documentation instead of a personal blog archive: searchable notes, stable categories, and short pages that can grow into deeper writeups.
+
+## Start here
 
 <CardGrid>
-  <Card title="Systems" icon="setting">
-    C/C++, Go, runtime behavior, build systems, and low-level implementation notes.
+  <Card title="Writing System" icon="pencil" link="/writing-system/">
+    How this site is organized for long-term technical writing.
   </Card>
-  <Card title="Protocols" icon="seti:json">
-    QUIC, RPC, proxies, transport behavior, and protocol reading notes.
+  <Card title="C++20 Coroutine Scheduler" icon="setting" link="/systems/cpp-coroutines/">
+    A lightweight message-driven coroutine example using C++20.
   </Card>
-  <Card title="Agent Infrastructure" icon="rocket">
-    Local automation, coding agents, tool orchestration, and developer workflows.
+  <Card title="Kafka Protocol Guide" icon="seti:json" link="/protocols/kafka-protocol-guide/">
+    Notes on Kafka request/response APIs, partition metadata, batching, and wire formats.
   </Card>
 </CardGrid>
 
-## Why this site exists
+## Sections
 
-This is the public knowledge base for Aporix. It is designed for durable writing:
+<CardGrid>
+  <Card title="Systems" icon="setting" link="/systems/">
+    C/C++, Go, runtime behavior, build systems, coroutine scheduling, and performance notes.
+  </Card>
+  <Card title="Protocols" icon="seti:json" link="/protocols/">
+    QUIC, Kafka, RPC, proxies, transport behavior, and protocol reading notes.
+  </Card>
+  <Card title="Agent Infrastructure" icon="rocket" link="/agents/">
+    Local automation, coding agents, tool orchestration, and practical developer workflows.
+  </Card>
+  <Card title="Projects" icon="github" link="/projects/">
+    Public project notes and writeups around useful repositories.
+  </Card>
+</CardGrid>
 
-- Markdown and MDX first
-- static output for GitHub Pages
-- built-in navigation, search, dark mode, and edit links
-- small enough to maintain for years
+## Operating rules
 
-The older blog archive was retired so future writing can be clearer and more useful.
+- Write in Markdown or MDX.
+- Keep each page focused on one engineering question.
+- Prefer concrete observations, examples, and references over broad summaries.
+- Retire weak content instead of carrying an old archive forever.
+
+## Links
+
+- [GitHub](https://github.com/aporix)
+- [Edit this page](https://github.com/aporix/aporix.github.io/edit/master/src/content/docs/index.mdx)

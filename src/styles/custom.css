@@ -50,3 +50,17 @@
   margin-bottom: 0;
   color: var(--sl-color-gray-2);
 }
+
+.comments-block {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+.comments-block h2 {
+  font-size: var(--sl-text-h3);
+}
+
+.comments-block p {
+  color: var(--sl-color-gray-3);
+}
