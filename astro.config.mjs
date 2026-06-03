@@ -18,9 +18,6 @@ export default defineConfig({
           href: 'https://github.com/aporix',
         },
       ],
-      editLink: {
-        baseUrl: 'https://github.com/aporix/aporix.github.io/edit/master/',
-      },
       customCss: ['./src/styles/custom.css'],
       components: {
         Footer: './src/components/FooterWithComments.astro',
