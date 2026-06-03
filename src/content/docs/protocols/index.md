@@ -12,3 +12,9 @@ Good topics:
 - proxy behavior
 - connection lifecycle
 - congestion control and loss recovery
+
+## Starter notes
+
+- [Network Protocol Map](./network-protocol-map/)
+- [Kafka Protocol Guide](./kafka-protocol-guide/)
+- [QUIC Reading Notes](./quic-reading/)

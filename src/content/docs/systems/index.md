@@ -12,3 +12,8 @@ Good topics:
 - coroutine and async models
 - CMake and build systems
 - profiling and performance tradeoffs
+
+## Starter notes
+
+- [C++20 Coroutine Message Scheduler](./cpp-coroutines/)
+- [Performance Tuning Notes](./performance-tuning/)
