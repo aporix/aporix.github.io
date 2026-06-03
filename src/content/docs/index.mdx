@@ -1,0 +1,41 @@
+---
+title: Aporix
+description: Systems, network protocols, and agent infrastructure.
+template: splash
+hero:
+  tagline: Systems, network protocols, agent infrastructure, and long-form engineering notes.
+  actions:
+    - text: Start Reading
+      link: /writing-system/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/aporix
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Focus
+
+<CardGrid>
+  <Card title="Systems" icon="setting">
+    C/C++, Go, runtime behavior, build systems, and low-level implementation notes.
+  </Card>
+  <Card title="Protocols" icon="seti:json">
+    QUIC, RPC, proxies, transport behavior, and protocol reading notes.
+  </Card>
+  <Card title="Agent Infrastructure" icon="rocket">
+    Local automation, coding agents, tool orchestration, and developer workflows.
+  </Card>
+</CardGrid>
+
+## Why this site exists
+
+This is the public knowledge base for Aporix. It is designed for durable writing:
+
+- Markdown and MDX first
+- static output for GitHub Pages
+- built-in navigation, search, dark mode, and edit links
+- small enough to maintain for years
+
+The older blog archive was retired so future writing can be clearer and more useful.

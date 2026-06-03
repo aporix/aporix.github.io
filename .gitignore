@@ -1,9 +1,4 @@
-_site/
-*.sw[po]
-*.~vsd
-\#*\#
-*~
+node_modules/
+dist/
+.astro/
 .DS_Store
-Gemfile.lock
-.vscode/
-.jekyll-metadata

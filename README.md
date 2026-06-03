@@ -1,12 +1,27 @@
 # Aporix
 
-Personal GitHub Pages site for [aporix](https://github.com/aporix).
+Personal technical writing site for [aporix](https://github.com/aporix), built with Astro and Starlight.
 
-The site is intentionally static:
+## Write
 
-- no build step
-- no framework
-- no vendored dependencies
-- no generated blog archive
+Add Markdown or MDX files under `src/content/docs`.
 
-Edit `index.html`, `styles.css`, and `main.js`, then push to `master`.
+```text
+src/content/docs/systems/
+src/content/docs/protocols/
+src/content/docs/agents/
+src/content/docs/projects/
+```
+
+## Run locally
+
+```sh
+npm install
+npm run dev
+```
+
+## Build
+
+```sh
+npm run build
+```
