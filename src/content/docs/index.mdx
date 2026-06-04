@@ -1,13 +1,15 @@
 ---
 title: Aporix
-description: Systems, network protocols, and agent infrastructure.
+description: A public engineering notebook for AI infrastructure, inference systems, protocols, and agent-native software.
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-Aporix is a public engineering notebook for systems programming, network protocols, and agent infrastructure.
+Aporix is a public engineering notebook for AI infrastructure, inference systems, protocols, and agent-native software.
 
-This site is intentionally structured as documentation instead of a personal blog archive: searchable notes, stable categories, and short pages that can grow into deeper writeups. The goal is to keep the public surface small, useful, and maintainable over years.
+**Turn confusion into systems.**
+
+Engineering often begins with confusion: an unstable problem, an unclear boundary, or a contradiction that has not yet been structured. Aporix is where I turn that confusion into reusable models, notes, diagrams, and projects.
 
 ## Start here
 
@@ -17,6 +19,12 @@ This site is intentionally structured as documentation instead of a personal blo
   </Card>
   <Card title="Writing System" icon="pencil" link="/writing-system/">
     How this site is organized for long-term technical writing.
+  </Card>
+  <Card title="What Is AI Infrastructure?" icon="seti:config" link="/notes/what-is-ai-infrastructure/">
+    A working definition of the control layer around production AI capability.
+  </Card>
+  <Card title="Model Serving Is Not Just an API" icon="setting" link="/notes/model-serving-is-not-just-an-api/">
+    Why serving is a runtime control problem, not only an endpoint.
   </Card>
   <Card title="Local Agent Operating Model" icon="rocket" link="/agents/local-agent-operating-model/">
     A practical model for using coding agents without losing engineering control.
@@ -32,14 +40,23 @@ This site is intentionally structured as documentation instead of a personal blo
 ## Sections
 
 <CardGrid>
-  <Card title="Systems" icon="setting" link="/systems/">
-    C/C++, Go, runtime behavior, build systems, coroutine scheduling, and performance notes.
+  <Card title="AI Infrastructure" icon="seti:config" link="/ai-infrastructure/">
+    Model gateways, observability, deployment, reliability, cost governance, and platform control.
+  </Card>
+  <Card title="Inference Systems" icon="setting" link="/inference-systems/">
+    Scheduling, batching, KV cache, runtime behavior, GPU memory, correctness, and performance debugging.
   </Card>
   <Card title="Protocols" icon="seti:json" link="/protocols/">
     QUIC, Kafka, RPC, proxies, transport behavior, and protocol reading notes.
   </Card>
   <Card title="Agent Infrastructure" icon="rocket" link="/agents/">
     Local automation, coding agents, tool orchestration, and practical developer workflows.
+  </Card>
+  <Card title="Systems Engineering" icon="setting" link="/systems/">
+    Runtime behavior, async systems, testing, CI, performance, reliability, and production engineering.
+  </Card>
+  <Card title="Engineering Philosophy" icon="pencil" link="/engineering-philosophy/">
+    Systems thinking, leverage, abstraction, engineering judgment, and long-term technical growth.
   </Card>
   <Card title="Projects" icon="github" link="/projects/">
     Public project notes and writeups around useful repositories.
@@ -48,7 +65,7 @@ This site is intentionally structured as documentation instead of a personal blo
 
 ## Reading paths
 
-If you are here for implementation details, start with [Systems](/systems/). If you are reading protocol behavior, start with [Protocols](/protocols/). If you are interested in coding agents and repeatable developer workflows, start with [Agent Infrastructure](/agents/).
+If you are here for production AI systems, start with [AI Infrastructure](/ai-infrastructure/) and [Inference Systems](/inference-systems/). If you are reading protocol behavior, start with [Protocols](/protocols/). If you are interested in coding agents and repeatable developer workflows, start with [Agent Infrastructure](/agents/).
 
 Posts are chronological and useful for following the work over time. Docs pages are the maintained version of ideas that still matter.
 
@@ -59,6 +76,7 @@ Posts are chronological and useful for following the work over time. Docs pages 
 - Prefer concrete observations, examples, and references over broad summaries.
 - Retire weak content instead of carrying an old archive forever.
 - Keep private or historical material out of the public surface unless it has been rewritten for readers.
+- Turn small observations into reusable systems over time.
 
 ## Links
 

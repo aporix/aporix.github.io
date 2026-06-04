@@ -39,7 +39,16 @@ export default defineConfig({
           translations: { 'zh-CN': '开始' },
           items: [
             { label: 'Home', translations: { 'zh-CN': '首页' }, slug: 'index' },
+            { label: 'About', translations: { 'zh-CN': '关于' }, slug: 'about' },
             { label: 'Writing System', translations: { 'zh-CN': '写作系统' }, slug: 'writing-system' },
+          ],
+        },
+        {
+          label: 'AI Systems',
+          translations: { 'zh-CN': 'AI 系统' },
+          items: [
+            { label: 'AI Infrastructure', translations: { 'zh-CN': 'AI 基础设施' }, slug: 'ai-infrastructure' },
+            { label: 'Inference Systems', translations: { 'zh-CN': '推理系统' }, slug: 'inference-systems' },
           ],
         },
         {
@@ -61,6 +70,16 @@ export default defineConfig({
           label: 'Projects',
           translations: { 'zh-CN': '项目' },
           items: [{ autogenerate: { directory: 'projects' } }],
+        },
+        {
+          label: 'Notes',
+          translations: { 'zh-CN': '笔记' },
+          items: [{ autogenerate: { directory: 'notes' } }],
+        },
+        {
+          label: 'Engineering Philosophy',
+          translations: { 'zh-CN': '工程哲学' },
+          items: [{ label: 'Engineering Philosophy', translations: { 'zh-CN': '工程哲学' }, slug: 'engineering-philosophy' }],
         },
       ],
     }),

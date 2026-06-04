@@ -5,6 +5,14 @@ description: How this site is organized for long-term technical writing.
 
 This site is organized as a small engineering notebook.
 
+The operating sentence is:
+
+```text
+confusion -> observation -> note -> model -> diagram -> project -> reusable system
+```
+
+This is not content production. It is system formation.
+
 ## Content model
 
 - `Systems`: implementation notes, language/runtime details, build tools, performance basics.
@@ -40,3 +48,25 @@ src/content/docs/agents/local-agent-workflows.md
 - Use tags on posts when the topic should be discoverable later.
 - Keep images next to the Markdown file that uses them.
 - Use Mermaid for diagrams that benefit from staying editable in text.
+
+## Note template
+
+```md
+## Problem
+What is the concrete problem or question?
+
+## Context
+Where did this problem appear?
+
+## Observation
+What did I observe?
+
+## Model
+What is the underlying structure or mental model?
+
+## Trade-offs
+What are the competing forces?
+
+## Conclusion
+What should I remember next time?
+```

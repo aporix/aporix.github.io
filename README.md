@@ -2,7 +2,7 @@
 
 Public engineering notebook for [aporix](https://github.com/aporix), built with Astro and Starlight.
 
-The site is the long-term public surface for systems programming, network protocol notes, and practical agent-infrastructure writing.
+The site is the long-term public surface for AI infrastructure, inference systems, network protocol notes, and practical agent-infrastructure writing.
 
 ## Public URLs
 
@@ -17,6 +17,7 @@ Add durable documentation pages under `src/content/docs`.
 src/content/docs/systems/
 src/content/docs/protocols/
 src/content/docs/agents/
+src/content/docs/notes/
 src/content/docs/projects/
 src/content/docs/zh-cn/
 ```

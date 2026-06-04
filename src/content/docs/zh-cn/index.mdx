@@ -1,13 +1,15 @@
 ---
 title: Aporix
-description: 系统编程、网络协议和 Agent 基础设施的公开工程知识库。
+description: AI 基础设施、推理系统、协议和 Agent 原生软件的公开工程知识库。
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-Aporix 是一个公开工程知识库，长期维护系统编程、网络协议和 Agent 基础设施相关的笔记与文章。
+Aporix 是一个公开工程知识库，长期维护 AI 基础设施、推理系统、网络协议和 Agent 原生软件相关的笔记与文章。
 
-这里不是资料堆积区。文章会按时间记录过程，知识库页面会沉淀仍然值得维护的内容。
+**把困惑沉淀为系统。**
+
+工程经常从困惑开始：不稳定的问题、不清晰的边界、还没有被结构化的矛盾。Aporix 用来把这些困惑沉淀成可复用的模型、笔记、图和项目。
 
 ## 从这里开始
 
@@ -17,6 +19,12 @@ Aporix 是一个公开工程知识库，长期维护系统编程、网络协议�
   </Card>
   <Card title="写作系统" icon="pencil" link="/zh-cn/writing-system/">
     这个站点如何组织长期技术写作。
+  </Card>
+  <Card title="什么是 AI 基础设施" icon="seti:config" link="/zh-cn/notes/what-is-ai-infrastructure/">
+    关于生产 AI 能力控制层的工作定义。
+  </Card>
+  <Card title="模型服务不只是 API" icon="setting" link="/zh-cn/notes/model-serving-is-not-just-an-api/">
+    为什么 serving 是运行时控制问题，而不只是一个 endpoint。
   </Card>
   <Card title="本地 Agent 工作模型" icon="rocket" link="/zh-cn/agents/local-agent-operating-model/">
     使用编码 Agent 时如何保持工程控制权。
@@ -29,6 +37,12 @@ Aporix 是一个公开工程知识库，长期维护系统编程、网络协议�
 ## 内容分区
 
 <CardGrid>
+  <Card title="AI 基础设施" icon="seti:config" link="/zh-cn/ai-infrastructure/">
+    模型网关、可观测性、部署、可靠性、成本治理和平台控制。
+  </Card>
+  <Card title="推理系统" icon="setting" link="/zh-cn/inference-systems/">
+    调度、batching、KV cache、运行时行为、GPU memory、正确性和性能调试。
+  </Card>
   <Card title="系统编程" icon="setting" link="/zh-cn/systems/">
     C/C++、Go、运行时行为、构建系统、协程模型和性能笔记。
   </Card>
@@ -41,11 +55,14 @@ Aporix 是一个公开工程知识库，长期维护系统编程、网络协议�
   <Card title="项目" icon="github" link="/zh-cn/projects/">
     只展示有清晰上下文、可以对外阅读的公开项目说明。
   </Card>
+  <Card title="工程哲学" icon="pencil" link="/zh-cn/engineering-philosophy/">
+    系统思维、杠杆、抽象、工程判断和长期技术成长。
+  </Card>
 </CardGrid>
 
 ## 阅读路径
 
-关注实现细节，从[系统编程](/zh-cn/systems/)开始。关注协议行为，从[网络协议](/zh-cn/protocols/)开始。关注编码 Agent 和开发工作流，从[Agent 基础设施](/zh-cn/agents/)开始。
+关注生产 AI 系统，从 [AI 基础设施](/zh-cn/ai-infrastructure/) 和 [推理系统](/zh-cn/inference-systems/) 开始。关注协议行为，从[网络协议](/zh-cn/protocols/)开始。关注编码 Agent 和开发工作流，从[Agent 基础设施](/zh-cn/agents/)开始。
 
 时间流文章适合跟踪过程；知识库页面是仍然值得维护的版本。
 
@@ -55,6 +72,7 @@ Aporix 是一个公开工程知识库，长期维护系统编程、网络协议�
 - 优先保留可复用观察、例子和判断。
 - 私有或历史材料不进入公开页面，除非已经重写成面向读者的内容。
 - 旧内容如果没有维护价值，就归档或移除。
+- 把小观察持续沉淀成可复用系统。
 
 ## 链接
 
