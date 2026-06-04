@@ -36,30 +36,30 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Start',
-          translations: { 'zh-cn': '开始' },
+          translations: { 'zh-CN': '开始' },
           items: [
-            { label: 'Home', translations: { 'zh-cn': '首页' }, slug: 'index' },
-            { label: 'Writing System', translations: { 'zh-cn': '写作系统' }, slug: 'writing-system' },
+            { label: 'Home', translations: { 'zh-CN': '首页' }, slug: 'index' },
+            { label: 'Writing System', translations: { 'zh-CN': '写作系统' }, slug: 'writing-system' },
           ],
         },
         {
           label: 'Systems',
-          translations: { 'zh-cn': '系统编程' },
+          translations: { 'zh-CN': '系统编程' },
           items: [{ autogenerate: { directory: 'systems' } }],
         },
         {
           label: 'Protocols',
-          translations: { 'zh-cn': '网络协议' },
+          translations: { 'zh-CN': '网络协议' },
           items: [{ autogenerate: { directory: 'protocols' } }],
         },
         {
           label: 'Agent Infrastructure',
-          translations: { 'zh-cn': 'Agent 基础设施' },
+          translations: { 'zh-CN': 'Agent 基础设施' },
           items: [{ autogenerate: { directory: 'agents' } }],
         },
         {
           label: 'Projects',
-          translations: { 'zh-cn': '项目' },
+          translations: { 'zh-CN': '项目' },
           items: [{ autogenerate: { directory: 'projects' } }],
         },
       ],
