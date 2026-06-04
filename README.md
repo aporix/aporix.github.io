@@ -1,6 +1,8 @@
 # Aporix
 
-Personal technical writing site for [aporix](https://github.com/aporix), built with Astro and Starlight.
+Public engineering notebook for [aporix](https://github.com/aporix), built with Astro and Starlight.
+
+The site is the long-term public surface for systems programming, network protocol notes, and practical agent-infrastructure writing.
 
 ## Write
 
@@ -54,3 +56,10 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Public structure
+
+- Docs pages are maintained, evergreen notes.
+- Posts are chronological updates with tags, archive pages, and RSS.
+- Images live beside the Markdown that references them.
+- Mermaid diagrams are supported in Markdown code blocks.

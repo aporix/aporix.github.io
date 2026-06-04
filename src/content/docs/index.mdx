@@ -7,7 +7,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 Aporix is a public engineering notebook for systems programming, network protocols, and agent infrastructure.
 
-This site is intentionally structured as documentation instead of a personal blog archive: searchable notes, stable categories, and short pages that can grow into deeper writeups.
+This site is intentionally structured as documentation instead of a personal blog archive: searchable notes, stable categories, and short pages that can grow into deeper writeups. The goal is to keep the public surface small, useful, and maintainable over years.
 
 ## Start here
 
@@ -17,6 +17,9 @@ This site is intentionally structured as documentation instead of a personal blo
   </Card>
   <Card title="Writing System" icon="pencil" link="/writing-system/">
     How this site is organized for long-term technical writing.
+  </Card>
+  <Card title="Local Agent Operating Model" icon="rocket" link="/agents/local-agent-operating-model/">
+    A practical model for using coding agents without losing engineering control.
   </Card>
   <Card title="C++20 Coroutine Scheduler" icon="setting" link="/systems/cpp-coroutines/">
     A lightweight message-driven coroutine example using C++20.
@@ -43,12 +46,19 @@ This site is intentionally structured as documentation instead of a personal blo
   </Card>
 </CardGrid>
 
+## Reading paths
+
+If you are here for implementation details, start with [Systems](/systems/). If you are reading protocol behavior, start with [Protocols](/protocols/). If you are interested in coding agents and repeatable developer workflows, start with [Agent Infrastructure](/agents/).
+
+Posts are chronological and useful for following the work over time. Docs pages are the maintained version of ideas that still matter.
+
 ## Operating rules
 
 - Write in Markdown or MDX.
 - Keep each page focused on one engineering question.
 - Prefer concrete observations, examples, and references over broad summaries.
 - Retire weak content instead of carrying an old archive forever.
+- Keep private or historical material out of the public surface unless it has been rewritten for readers.
 
 ## Links
 

@@ -32,3 +32,11 @@ src/content/docs/protocols/quic-loss-recovery.md
 src/content/docs/systems/cpp-coroutines.md
 src/content/docs/agents/local-agent-workflows.md
 ```
+
+## Publishing workflow
+
+- Put evergreen material under `src/content/docs`.
+- Put time-based updates under `src/content/posts`.
+- Use tags on posts when the topic should be discoverable later.
+- Keep images next to the Markdown file that uses them.
+- Use Mermaid for diagrams that benefit from staying editable in text.

@@ -12,3 +12,7 @@ Good topics:
 - browser and shell automation
 - repeatable debugging routines
 - documentation and handoff automation
+
+## Starter notes
+
+- [Local Agent Operating Model](./local-agent-operating-model/)

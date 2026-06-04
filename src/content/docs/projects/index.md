@@ -7,12 +7,14 @@ Project notes should explain the engineering value of a repository, not just lis
 
 ## Current public signals
 
-- [reading-and-annotate-quic](https://github.com/aporix/reading-and-annotate-quic)
-- [quic_draft_zh](https://github.com/aporix/quic_draft_zh)
-- [quic_lr_draft_zh](https://github.com/aporix/quic_lr_draft_zh)
+- [aporix.github.io](https://github.com/aporix/aporix.github.io): the public writing site behind this notebook.
+- [aporix](https://github.com/aporix/aporix): the GitHub profile README and public account entry point.
 
-## Private work to revisit
+## Private work
 
 - `dagora`: recent Go project
-- `bf`: simple RPC framework experiment
-- `cmake_x`: CMake study notes
+- `legacy-archive`: cold archive for old notes and experiments
+
+## Publishing rule
+
+A repository should become public only when it has a clear README, a narrow purpose, and enough context for a reader who does not know the history behind it.
