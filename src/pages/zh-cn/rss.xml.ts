@@ -1,6 +1,6 @@
 import { getCollection } from 'astro:content';
-import { getLocaleConfig } from '../config/i18n';
-import { filterPostsByLocale, getPostHref, sortPosts } from '../lib/posts';
+import { getLocaleConfig } from '../../config/i18n';
+import { filterPostsByLocale, getPostHref, sortPosts } from '../../lib/posts';
 
 const site = 'https://aporix.github.io';
 
@@ -14,7 +14,7 @@ function escapeXml(value: string) {
 }
 
 export async function GET() {
-  const locale = 'en';
+  const locale = 'zh-cn';
   const config = getLocaleConfig(locale);
   const posts = sortPosts(filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), locale));
   const items = posts
@@ -35,8 +35,8 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
     <rss version="2.0">
       <channel>
-        <title>Aporix</title>
-        <link>${site}/</link>
+        <title>${escapeXml(config.title)}</title>
+        <link>${site}${config.homePath}</link>
         <description>${escapeXml(config.rssDescription)}</description>
         <language>${config.lang}</language>
         ${items}

@@ -7,6 +7,17 @@ export default defineConfig({
     starlight({
       title: 'Aporix',
       description: 'Systems, network protocols, and agent infrastructure.',
+      defaultLocale: 'root',
+      locales: {
+        root: {
+          label: 'English',
+          lang: 'en',
+        },
+        'zh-cn': {
+          label: '简体中文',
+          lang: 'zh-CN',
+        },
+      },
       logo: {
         src: './src/assets/logo.svg',
         alt: 'Aporix',
@@ -25,28 +36,30 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Start',
+          translations: { 'zh-cn': '开始' },
           items: [
-            { label: 'Home', slug: 'index' },
-            { label: 'Writing System', slug: 'writing-system' },
-            { label: 'Recent Posts', link: '/posts/' },
-            { label: 'Archive', link: '/archive/' },
-            { label: 'Tags', link: '/tags/' },
+            { label: 'Home', translations: { 'zh-cn': '首页' }, slug: 'index' },
+            { label: 'Writing System', translations: { 'zh-cn': '写作系统' }, slug: 'writing-system' },
           ],
         },
         {
           label: 'Systems',
+          translations: { 'zh-cn': '系统编程' },
           items: [{ autogenerate: { directory: 'systems' } }],
         },
         {
           label: 'Protocols',
+          translations: { 'zh-cn': '网络协议' },
           items: [{ autogenerate: { directory: 'protocols' } }],
         },
         {
           label: 'Agent Infrastructure',
+          translations: { 'zh-cn': 'Agent 基础设施' },
           items: [{ autogenerate: { directory: 'agents' } }],
         },
         {
           label: 'Projects',
+          translations: { 'zh-cn': '项目' },
           items: [{ autogenerate: { directory: 'projects' } }],
         },
       ],

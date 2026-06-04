@@ -1,0 +1,65 @@
+---
+title: Aporix
+description: 系统编程、网络协议和 Agent 基础设施的公开工程知识库。
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Aporix 是一个公开工程知识库，长期维护系统编程、网络协议和 Agent 基础设施相关的笔记与文章。
+
+这里不是资料堆积区。文章会按时间记录过程，知识库页面会沉淀仍然值得维护的内容。
+
+## 从这里开始
+
+<CardGrid>
+  <Card title="近期文章" icon="open-book" link="/zh-cn/posts/">
+    按时间倒序排列的技术文章、笔记和阶段性记录。
+  </Card>
+  <Card title="写作系统" icon="pencil" link="/zh-cn/writing-system/">
+    这个站点如何组织长期技术写作。
+  </Card>
+  <Card title="本地 Agent 工作模型" icon="rocket" link="/zh-cn/agents/local-agent-operating-model/">
+    使用编码 Agent 时如何保持工程控制权。
+  </Card>
+  <Card title="网络协议" icon="seti:json" link="/zh-cn/protocols/">
+    QUIC、Kafka、RPC、代理行为和传输层阅读笔记。
+  </Card>
+</CardGrid>
+
+## 内容分区
+
+<CardGrid>
+  <Card title="系统编程" icon="setting" link="/zh-cn/systems/">
+    C/C++、Go、运行时行为、构建系统、协程模型和性能笔记。
+  </Card>
+  <Card title="网络协议" icon="seti:json" link="/zh-cn/protocols/">
+    协议阅读、线格式、连接生命周期、代理行为和传输层细节。
+  </Card>
+  <Card title="Agent 基础设施" icon="rocket" link="/zh-cn/agents/">
+    本地自动化、编码 Agent、工具编排和可复用开发流程。
+  </Card>
+  <Card title="项目" icon="github" link="/zh-cn/projects/">
+    只展示有清晰上下文、可以对外阅读的公开项目说明。
+  </Card>
+</CardGrid>
+
+## 阅读路径
+
+关注实现细节，从[系统编程](/zh-cn/systems/)开始。关注协议行为，从[网络协议](/zh-cn/protocols/)开始。关注编码 Agent 和开发工作流，从[Agent 基础设施](/zh-cn/agents/)开始。
+
+时间流文章适合跟踪过程；知识库页面是仍然值得维护的版本。
+
+## 维护规则
+
+- 每个页面回答一个具体工程问题。
+- 优先保留可复用观察、例子和判断。
+- 私有或历史材料不进入公开页面，除非已经重写成面向读者的内容。
+- 旧内容如果没有维护价值，就归档或移除。
+
+## 链接
+
+- [文章](/zh-cn/posts/)
+- [归档](/zh-cn/archive/)
+- [标签](/zh-cn/tags/)
+- [RSS](/zh-cn/rss.xml)
+- [GitHub](https://github.com/aporix)

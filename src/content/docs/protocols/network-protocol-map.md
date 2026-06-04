@@ -16,10 +16,6 @@ The original scope was broad: HTTP, WebSocket, HTTP/2, HTTP/3, TLS/SSL, TCP/IP, 
 - TLS handshake, certificates, and encrypted transport
 - TCP connection lifecycle, congestion, retransmission, and buffering
 
-## External material
-
-- [geektime-webprotocol](https://github.com/aporix/geektime-webprotocol)
-
 ## Future direction
 
 Turn each protocol into a short note:

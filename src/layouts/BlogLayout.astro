@@ -2,32 +2,38 @@
 interface Props {
   title: string;
   description?: string;
+  locale?: Locale;
 }
 
 import MermaidRuntime from '../components/MermaidRuntime.astro';
+import type { Locale } from '../config/i18n';
+import { getAlternateHref, getLocaleConfig } from '../config/i18n';
 
-const { title, description = 'Engineering notes from Aporix.' } = Astro.props;
-const pageTitle = title === 'Aporix Notes' ? title : `${title} | Aporix`;
+const { title, description, locale = 'en' } = Astro.props;
+const config = getLocaleConfig(locale);
+const pageDescription = description ?? config.rssDescription;
+const pageTitle = title === config.notesTitle ? title : `${title} | Aporix`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={config.lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
+    <meta name="description" content={pageDescription} />
     <title>{pageTitle}</title>
-    <link rel="alternate" type="application/rss+xml" title="Aporix RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${config.title} RSS`} href={config.rssPath} />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">Aporix</a>
+      <a class="brand" href={config.homePath}>Aporix</a>
       <nav aria-label="Main navigation">
-        <a href="/posts/">Posts</a>
-        <a href="/archive/">Archive</a>
-        <a href="/tags/">Tags</a>
-        <a href="/rss.xml">RSS</a>
-        <a href="https://github.com/aporix">GitHub</a>
+        <a href={config.postsPath}>{config.nav.posts}</a>
+        <a href={config.archivePath}>{config.nav.archive}</a>
+        <a href={config.tagsPath}>{config.nav.tags}</a>
+        <a href={config.rssPath}>{config.nav.rss}</a>
+        <a href={getAlternateHref(locale)}>{config.nav.switchLocale}</a>
+        <a href="https://github.com/aporix">{config.nav.github}</a>
       </nav>
     </header>
     <main class="page-shell">

@@ -1,12 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Comments from '../../components/Comments.astro';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getLocaleConfig } from '../../config/i18n';
-import { filterPostsByLocale, formatDate, getPostHref, getPostLocale, getPostSlug, getTagHref, sortPosts } from '../../lib/posts';
+import Comments from '../../../components/Comments.astro';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getLocaleConfig } from '../../../config/i18n';
+import { filterPostsByLocale, formatDate, getPostHref, getPostLocale, getPostSlug, getTagHref, sortPosts } from '../../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), 'en');
+  const posts = filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), 'zh-cn');
 
   return posts.map((post) => ({
     params: { slug: getPostSlug(post) },

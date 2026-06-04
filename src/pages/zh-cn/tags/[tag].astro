@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getLocaleConfig } from '../../config/i18n';
-import { filterPostsByLocale, formatDate, getPostHref, getTagIndex, getTagSlug, sortPosts } from '../../lib/posts';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getLocaleConfig } from '../../../config/i18n';
+import { filterPostsByLocale, formatDate, getPostHref, getTagIndex, getTagSlug, sortPosts } from '../../../lib/posts';
 
 export async function getStaticPaths() {
-  const locale = 'en';
+  const locale = 'zh-cn';
   const posts = sortPosts(filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), locale));
   const tagIndex = getTagIndex(posts);
 
@@ -19,7 +19,7 @@ const { tag, posts, locale } = Astro.props;
 const config = getLocaleConfig(locale);
 ---
 
-<BlogLayout title={`Tag: ${tag}`} description={`Posts tagged ${tag}.`} locale={locale}>
+<BlogLayout title={`标签：${tag}`} description={`标签为 ${tag} 的文章。`} locale={locale}>
   <section>
     <p class="page-kicker">{config.tagsTitle}</p>
     <h1>{tag}</h1>

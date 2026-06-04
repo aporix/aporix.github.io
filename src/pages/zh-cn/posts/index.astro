@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getLocaleConfig } from '../../config/i18n';
-import { filterPostsByLocale, formatDate, getPostHref, getTagHref, sortPosts } from '../../lib/posts';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getLocaleConfig } from '../../../config/i18n';
+import { filterPostsByLocale, formatDate, getPostHref, getTagHref, sortPosts } from '../../../lib/posts';
 
-const locale = 'en';
+const locale = 'zh-cn';
 const config = getLocaleConfig(locale);
 const posts = sortPosts(filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), locale));
 ---
@@ -19,7 +19,7 @@ const posts = sortPosts(filterPostsByLocale(await getCollection('posts', ({ data
   <section class="post-list" aria-label="Posts">
     {posts.map((post) => (
       <article class="post-item">
-        <p class="post-meta">{formatDate(post.data.date)}</p>
+        <p class="post-meta">{formatDate(post.data.date, locale)}</p>
         <h2><a href={getPostHref(post)}>{post.data.title}</a></h2>
         <p>{post.data.description}</p>
         {post.data.tags.length > 0 && (

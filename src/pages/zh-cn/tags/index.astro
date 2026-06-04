@@ -1,14 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getLocaleConfig } from '../../config/i18n';
-import { filterPostsByLocale, getTagHref, getTagIndex, sortPosts } from '../../lib/posts';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getLocaleConfig } from '../../../config/i18n';
+import { filterPostsByLocale, getTagHref, getTagIndex, sortPosts } from '../../../lib/posts';
 
-const locale = 'en';
+const locale = 'zh-cn';
 const config = getLocaleConfig(locale);
 const posts = sortPosts(filterPostsByLocale(await getCollection('posts', ({ data }) => !data.draft), locale));
 const tagIndex = getTagIndex(posts);
-const tags = [...tagIndex.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const tags = [...tagIndex.entries()].sort((a, b) => a[0].localeCompare(b[0], config.lang));
 ---
 
 <BlogLayout title={config.tagsTitle} description={config.tagsDescription} locale={locale}>
