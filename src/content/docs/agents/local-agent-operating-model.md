@@ -20,7 +20,7 @@ An agent should not become the owner of ambiguous product direction. It can prop
 Useful boundaries:
 
 - keep destructive actions explicit
-- keep private material out of public repositories
+- keep non-public material out of public repositories
 - prefer small commits with clear messages
 - run local checks before pushing
 - write down why a cleanup happened, not only what changed
@@ -39,9 +39,9 @@ flowchart LR
 ## Practical checklist
 
 - Is the repository still useful to another reader?
-- Does the README explain the purpose without private context?
+- Does the README explain the purpose without hidden context?
 - Are old experiments archived instead of left public by accident?
 - Can new writing be added with Markdown instead of code changes?
 - Is the public profile pointing to the best maintained material?
 
-This is the operating rule for this account: public surfaces should explain current work; private archives should preserve history without becoming noise.
+This is the operating rule for this account: public surfaces should explain maintained work and avoid exposing stale or non-public context.
